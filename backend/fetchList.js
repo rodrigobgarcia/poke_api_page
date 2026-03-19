@@ -15,7 +15,6 @@ export async function fetchList() {
         const pokemonName = document.createElement('h3');
         const pokemonLink = document.createElement('a')
 
-        // Get Pokemon images
         async function fetchImage() {
             const response = await fetch(`${pokemon.url}`);
             const dataImage = await response.json();
@@ -24,7 +23,6 @@ export async function fetchList() {
         }
         fetchImage();
         
-        // Pokemon Name and Link
         pokemonName.textContent = pokemon.name;
         pokemonName.id = "list__item-name"
         pokemonLink.textContent = pokemon.url;
@@ -37,7 +35,6 @@ export async function fetchList() {
         pokemonListItem.appendChild(pokemonNameLinkContainer);
         pokemonListItem.appendChild(pokemonImage);
             
-        //Add new elements in HTML
         const ulElement = document.getElementById("pokemon_list-list")
         ulElement.appendChild(pokemonListItem);
     }
