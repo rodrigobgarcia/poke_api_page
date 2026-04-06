@@ -8,7 +8,9 @@ export async function fetchList() {
     const data = await response.json();
 
     const pokemonList = data.results;
-    for (let pokemon of pokemonList) {
+    console.log(pokemonList);
+    return pokemonList;
+    /* for (let pokemon of pokemonList) {
         const pokemonListItem = document.createElement('div');
         const pokemonNameLinkContainer = document.createElement('div');
         let pokemonImage = document.createElement('img')
@@ -37,7 +39,7 @@ export async function fetchList() {
             
         const ulElement = document.getElementById("pokemon_list-list")
         ulElement.appendChild(pokemonListItem);
-    }
+    } */
 }
 
 
