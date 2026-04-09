@@ -7,16 +7,19 @@ export default class ListItem {
     }
 
     _getTemplate() {
-        return itemTemplate = document
+        const itemTemplate = document
             .getElementById(this._template)
             .content
             .cloneNode(true);
+        return itemTemplate;
     };
 
     _fillListItem() {
         const listItem = this._getTemplate();
-        listItem.querySelector(".list__item-name").textContent = this._name;
-        listItem.querySelector(".list__item-url").href = this._url;
+        console.log(typeof(listItem));
+        listItem.getElementById("list__item-name").textContent = this._name;
+        listItem.getElementById("list__item-url").textContent = this._url;
+        listItem.getElementById("list__item-url").href = this._url;
         return listItem;
     }
 }
