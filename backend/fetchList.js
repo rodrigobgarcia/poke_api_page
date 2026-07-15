@@ -8,7 +8,6 @@ export async function fetchList() {
     const data = await response.json();
 
     const pokemonList = data.results;
-    console.log(pokemonList);
     return pokemonList;
     /* for (let pokemon of pokemonList) {
         const pokemonListItem = document.createElement('div');
